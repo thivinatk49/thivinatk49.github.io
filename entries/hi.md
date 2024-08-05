@@ -1,0 +1,1 @@
+it's a greeting people say when they meet each other

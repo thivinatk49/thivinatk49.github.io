@@ -1,0 +1,20 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Encyclopedia
+{% endblock %}
+
+{% block body %}
+<h1>All related Pages</h1>
+
+<ul>
+    {% for entry in entries %}
+    {% if query in entry %}
+        <li> <a href = "{% url 'entry' entry.title %}">{{ entry }}</a></li>
+    {% endif %}
+    {% empty %}
+        <li>none</li> 
+    {% endfor %}
+</ul>
+
+{% endblock %}
